@@ -1,0 +1,27 @@
+[{
+    "firstName":"Max",
+    "lastName":"Schwwarzmueller",
+    "age":29,
+    "history":[
+        {"disease":"cold","treatment":"D-Cold"},
+        {"lastTreatment":"2 months ago"}
+    ]
+},
+{
+    "firstName":"Jonny",
+    "lastName":"Liver",
+    "age":35,
+    "history":[
+        {"disease":"tootache","treatment":"toothpaste"},
+        {"lastTreatment":"1 year ago"}
+    ]
+},{
+    "firstName":"Amrit",
+    "lastName":"Kafle",
+    "age":20,
+    "history":[
+        {"disease":"blur vision","treatment":"occupol D"},
+        {"lastTreatment":"6 months ago"}
+    ]
+}
+]

@@ -1,0 +1,41 @@
+use patients
+==================================
+db.patients.insertMany([{
+    "firstName":"Max",
+    "lastName":"Schwwarzmueller",
+    "age":29,
+    "history":[
+        {"disease":"cold","treatment":"D-Cold"},
+        {"lastTreatment":"2 months ago"}
+    ]
+},
+{
+    "firstName":"Jonny",
+    "lastName":"Liver",
+    "age":35,
+    "history":[
+        {"disease":"tootache","treatment":"toothpaste"},
+        {"lastTreatment":"1 year ago"}
+    ]
+},{
+    "firstName":"Amrit",
+    "lastName":"Kafle",
+    "age":20,
+    "history":[
+        {"disease":"blur vision","treatment":"occupol D"},
+        {"lastTreatment":"6 months ago"}
+    ]
+}
+])
+===============================
+
+db.patients.updateOne({"firstName":"Amrit"},{$set:{"lastName":"flee"}})
+db.patients.updateOne({"firstName":"Amrit"},{$set:{"age":21}})
+
+==================================
+
+db.patients.find({"age":{$gt:30}})
+
+===============================
+
+db.patients.deleteMany({"history.disease":"cold"})

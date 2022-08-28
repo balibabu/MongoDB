@@ -1,0 +1,25 @@
+use <db_name>
+db.db_name.insertOne({name:"A Book",price:12.99})
+db.db_name.insertMany([{value},{value}])
+
+db.db_name.find()  // gives first 20 values
+db.db_name.find().pretty()
+db.db_name.find({distance:1200})  // returns all value with distance 1200
+db.db_name.find({distance:{$gt:1200}}) // returns all values with distance greater than 1200
+// here $ denotes the reserved keyword
+db.db_name.findOne({distance:{$gt:1200}}) // returns only one
+db.db_name.find().toArray()  // gives all values
+db.db_name.find().forEach((passengerData)=>{printjson(passengerData)})
+// here each value is passed in anonymous function printing in json format // we can print in any format
+
+
+db.db_name.deleteOne({name:"A Book"})
+db.db_name.deleteMany({name:"column"})
+
+db.db_name.updateOne({name:"A Book"},{$set:{newAtrr:"value"}})
+db.db_name.updateMany({},{$set:{marker:"value"}})
+db.db_name.update({name:"A Book"},{newAtrr:"value"})
+update -> removes all other values and insert the new value
+
+db.db_name.replaceOne({id:"value"},{new data}) // this will replace first old data with new data
+it is same as update

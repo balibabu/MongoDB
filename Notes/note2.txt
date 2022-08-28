@@ -1,0 +1,20 @@
+PROJECTION
+
+db.passengers.find({},{name:1})
+first arg -> filter, 2nd -> what we want
+
+db.passengers.find({},{name:1, _id:0})
+_id:0 means we don't need id
+by default all other are 0
+
+
+Embeded Document
+data inside data
+eg: {detail:{smoe:{value}}}
+
+array
+{detail:[list,list],or:{ssahdjab}}
+
+while searching
+ db.passengers.find({"detail.smoe":"value"})
+ 
